@@ -3,24 +3,24 @@ import { Schema, model, Document } from "mongoose";
 export type Owner = "USER" | "AGENT";
 export type Confidence = "LOW" | "MEDIUM" | "HIGH";
 
-interface Message {
+export interface Message {
   owner: Owner;
   text: string;
   timestamp: Date;
 }
 
-interface TripDetails {
+export interface TripDetails {
   destination?: string | null;
   departureCity?: string | null;
   travelDate?: string | null;
-  travellers?: string | null;
+  travellers?: String | null;
   budget?: string | null;
   duration?: string | null;
   tripType?: string | null;
   specialRequirements?: string | null;
 }
 
-interface Score {
+export interface Score {
   leadScore: number;
   confidence: Confidence;
   reason: string;
