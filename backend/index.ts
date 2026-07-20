@@ -1,13 +1,17 @@
 import "dotenv/config";
 import express from "express";
-const app = express();
-app.use(express.json());
 import dns from "dns";
 import { NewMessageSchema } from "./lib/zodSchema";
 import { Conversation } from "./db/conversation";
 import { startAgent } from "./agent/agent";
 import mongoose from "mongoose";
+import cors from "cors";
+const app = express();
+app.use(express.json());
+
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
+app.use(cors({ origin: process.env.CLIENT_URL }));
 
 app.post("/api/v1/chat/new-message", async (req, res) => {
   try {
