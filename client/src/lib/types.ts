@@ -1,8 +1,5 @@
 export type Confidence = "LOW" | "MEDIUM" | "HIGH";
 
-// Matches the backend's structured output exactly, including the
-// "replay" key as currently returned by /api/v1/chat/new-message.
-// Rename to "reply" here (and in the backend schema) if that gets fixed later.
 export interface AgentResponse {
   replay: string;
   customerName: string | null;

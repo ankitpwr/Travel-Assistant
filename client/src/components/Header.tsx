@@ -1,7 +1,7 @@
-import { Plane, RotateCcw } from "lucide-react"; //[cite: 6]
+import { Plane, RotateCcw } from "lucide-react";
 
 interface HeaderProps {
-  onNewChat: () => void; //[cite: 6]
+  onNewChat: () => void;
 }
 
 export function Header({ onNewChat }: HeaderProps) {
@@ -17,7 +17,7 @@ export function Header({ onNewChat }: HeaderProps) {
       </div>
 
       <button
-        onClick={onNewChat} //[cite: 6]
+        onClick={onNewChat}
         className="group flex items-center gap-2 rounded-full border border-white/10 bg-zinc-900/50 px-4 py-2 font-inter text-sm font-medium text-zinc-300 transition-all duration-300  hover:bg-zinc-800 hover:text-white active:scale-95"
       >
         <RotateCcw className="h-4 w-4 transition-transform duration-500 group-hover:-rotate-180" />

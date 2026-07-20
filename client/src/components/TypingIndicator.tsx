@@ -1,4 +1,4 @@
-import { Plane } from "lucide-react"; //[cite: 8]
+import { Plane } from "lucide-react";
 
 export function TypingIndicator() {
   return (

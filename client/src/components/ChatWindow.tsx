@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import type { ChatMessage } from "@/lib/types";
 import { TypingIndicator } from "./TypingIndicator";
 import { MessageBubble } from "./MessageBubble";
-import { Plane } from "lucide-react"; // Using Lucide for a cleaner icon
 
 interface ChatWindowProps {
   messages: ChatMessage[];
